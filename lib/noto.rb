@@ -3,16 +3,12 @@ require "noto/version"
 module Noto
   module Core
 
-    attr_accessor :options
     # ---------------- Available Methods -------- #
-    def initialize(params)
-      send "#{options}=", {}
-    end
+    mattr_accessor :options
 
     def noto(option = {})
-      logger.info '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
-      logger.info options
-      logger.info '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+      @@options ||= {}
+      @@options.merge(options)
     end
   end
 
@@ -23,7 +19,9 @@ module Noto
 
       private
       def create_notification
-
+        logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+        logger.info @@options
+        logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
       end
     end
   end
