@@ -20,7 +20,7 @@ module Noto
       extend Core
       after_create :create_notification
 
-      private
+      # private
       def create_notification
         logger.info '###################################'
         logger.info @@options
