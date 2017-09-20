@@ -8,7 +8,10 @@ module Noto
 
     # ---------------- Available Methods -------- #
     def noto(option = {})
-      self.errors.add('notify', 'Hello.com')
+      logger.info "************************************"
+      logger.info option[:actions]
+      logger.info option[:notify]
+      logger.info "************************************"
     end
   end
 
