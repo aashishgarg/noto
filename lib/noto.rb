@@ -23,7 +23,7 @@ module Noto
       # private
       def create_notification
         logger.info '###################################'
-        logger.info @@options
+        logger.info self.options
         logger.info '###################################'
       end
     end
