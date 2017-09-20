@@ -8,7 +8,7 @@ module Noto
 
     def noto(option = {})
       @@options ||= {}
-      @@options.merge(options)
+      @@options.merge!(options)
       logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
       logger.info @@options
       logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
@@ -22,7 +22,9 @@ module Noto
 
       private
       def create_notification
-
+        logger.info '###################################'
+        logger.info @@options
+        logger.info '###################################'
       end
     end
   end
