@@ -3,7 +3,7 @@ require "noto/version"
 module Noto
   module ClassMethods
 
-    attr_accessor :options, {}
+    attr_accessor :options
     # ---------------- Available Methods -------- #
     def noto(option = {})
       @options.merge(options)
@@ -18,7 +18,7 @@ module Noto
       private
       def create_notification
         logger.info '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
-        logger.info @options.inspect
+        logger.info
         logger.info '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
       end
     end
