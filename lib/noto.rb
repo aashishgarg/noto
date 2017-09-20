@@ -3,9 +3,10 @@ require "noto/version"
 module Noto
   module ClassMethods
 
+    attr_accessor_with_default :options, {}
     # ---------------- Available Methods -------- #
     def noto(option = {})
-
+      @options.merge(options)
     end
   end
 
@@ -16,9 +17,9 @@ module Noto
 
       private
       def create_notification
-        logger.info "sasdasdasdasdasdasdasda"
-        logger.info "sasdasdasdasdasdasdasda"
-        logger.info "sasdasdasdasdasdasdasda"
+        logger.info '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+        logger.info @options.inspect
+        logger.info '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
       end
     end
   end
