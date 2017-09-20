@@ -23,7 +23,9 @@ module Noto
       # private
       def create_notification
         logger.info '###################################'
-        logger.info self.options
+        logger.info self.inspect
+        logger.info '###################################'
+        logger.info self.class.class_variable_get(:@@options)
         logger.info '###################################'
       end
     end
