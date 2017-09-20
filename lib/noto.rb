@@ -3,10 +3,12 @@ require "noto/version"
 module Noto
   module ClassMethods
 
-    def noto(options = {})
-      logger.info "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      logger.info "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      logger.info "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+    # ---------------- Accessors ---------------- #
+
+
+    # ---------------- Available Methods -------- #
+    def noto(option = {})
+      self.errors.add('notify', 'Hello.com')
     end
   end
 
