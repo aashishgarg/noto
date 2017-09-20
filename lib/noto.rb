@@ -6,7 +6,7 @@ module Noto
     # ---------------- Available Methods -------- #
     mattr_accessor :options
 
-    def noto(option = {})
+    def noto(options = {})
       @@options ||= {}
       @@options.merge!(options)
       logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
