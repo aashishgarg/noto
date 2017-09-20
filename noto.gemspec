@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "noto"
   spec.version       = Noto::VERSION
   spec.authors       = ["Ashish Garg"]
-  spec.email         = ["ashish.garg@headerlabs.com"]
+  spec.email         = ["01ashishgarg@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Notification data generation for different model associations.}
+  spec.description   = %q{Notification data generation for different model associations.}
+  spec.homepage      = "https://www.aashishgarg.com"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

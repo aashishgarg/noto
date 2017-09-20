@@ -4,7 +4,9 @@ module Noto
   module ClassMethods
 
     def noto(options = {})
-
+      logger.info "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      logger.info "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      logger.info "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
     end
   end
 
