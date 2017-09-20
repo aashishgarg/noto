@@ -3,7 +3,7 @@ require "noto/version"
 module Noto
   module ClassMethods
 
-    attr_accessor_with_default :options, {}
+    attr_accessor :options, {}
     # ---------------- Available Methods -------- #
     def noto(option = {})
       @options.merge(options)
