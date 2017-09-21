@@ -11,8 +11,10 @@ module Noto
 
   def self.included(base)
     base.class_eval do
-      extend Core
+
       attr_accessor :aa
+
+      extend Core
 
       after_create :create_notification
 
