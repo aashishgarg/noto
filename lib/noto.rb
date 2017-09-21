@@ -17,7 +17,7 @@ module Noto
 
       private
       def create_notification
-
+        byebug
       end
     end
   end
