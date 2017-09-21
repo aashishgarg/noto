@@ -17,7 +17,7 @@ module Noto
       # private
       def create_notification
         logger.info "***********************"
-        logger.info @a
+        logger.info self.a
         logger.info "***********************"
       end
     end
