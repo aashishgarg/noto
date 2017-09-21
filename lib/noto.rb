@@ -2,16 +2,10 @@ require "noto/version"
 
 module Noto
   module Core
-
+    attr_accessor :aa
     # ---------------- Available Methods -------- #
-    mattr_accessor :options
-
     def noto(options = {})
-      @@options ||= {}
-      @@options.merge!(options)
-      logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-      logger.info @@options
-      logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+      @aa = 'asdas'
     end
   end
 
@@ -22,11 +16,9 @@ module Noto
 
       # private
       def create_notification
-        logger.info '###################################'
-        logger.info self.inspect
-        logger.info '###################################'
-        logger.info self.class.class_variable_get(:@@options)
-        logger.info '###################################'
+        logger.info "***********************"
+        logger.info @a
+        logger.info "***********************"
       end
     end
   end
