@@ -3,7 +3,7 @@ module Noto
     # ---------------- Available Methods -------- #
     def notifier(options = {})
       puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-      puts options
+      puts options.keys
       puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
     end
   end
