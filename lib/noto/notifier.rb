@@ -2,10 +2,11 @@ module Noto
   module Core
     def notifier(options = {})
       @@target = options[:target]
-      puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-      puts @@target
-      puts valid_target?
-      puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+      # puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+      # puts @@target
+      # puts valid_target?
+      # puts '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+      valid_target?
     end
 
     def valid_options
@@ -13,7 +14,10 @@ module Noto
     end
 
     def valid_target?
-      self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target.keys.first}
+      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      puts @@target.keys
+      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target.keys}
     end
   end
 end
