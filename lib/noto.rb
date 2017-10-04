@@ -4,9 +4,7 @@ module Noto
   module Core
     # ---------------- Available Methods -------- #
     def noto(options = {})
-      logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&'
-      logger.info options
-      logger.info '&&&&&&&&&&&&&&&&&&&&&&&&&&&'
+
     end
   end
 
@@ -17,7 +15,7 @@ module Noto
 
       private
       def create_notification
-        byebug
+
       end
     end
   end
