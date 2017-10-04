@@ -10,4 +10,4 @@ module Noto
   end
 end
 
-# ActiveRecord::Base.send(:include, Noto)
+ActiveRecord::Base.send(:include, Noto)

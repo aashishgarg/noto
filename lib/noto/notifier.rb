@@ -1,4 +1,4 @@
-module Noto
+# module Noto
   module Core
     def notifier(options = {})
       @@target = options[:target]
@@ -19,4 +19,4 @@ module Noto
       self
     end
   end
-end
+# end
