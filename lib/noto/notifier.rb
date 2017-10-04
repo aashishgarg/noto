@@ -15,6 +15,7 @@ module Noto
 
     def valid_target?
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      puts @@target
       puts @@target.keys
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
       self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target.keys}
