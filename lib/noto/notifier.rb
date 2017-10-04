@@ -1,9 +1,8 @@
-# module Noto
+module Noto
   module Core
     def notifier(options = {})
       @@target = options[:target]
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      # valid_target?
+      valid_target?
     end
 
     def valid_options
@@ -11,12 +10,14 @@
     end
 
     def valid_target?
-      # a = self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target.keys.first}
-      # puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      # puts a
-      # puts @@target.keys.first
-      # puts self.reflect_on_all_associations.collect(&:name)
-      # puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      if @@target.is_a?(Hash)
+        raise 'Association not found' unless self.reflect_on_all_associations.collect(&:name).include?(@@target.keys)
+      elsif @@target.is_a?(Symbol)
+
+      else
+
+      end
+
     end
   end
-# end
+end
