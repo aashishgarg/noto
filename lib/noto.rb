@@ -3,9 +3,9 @@ require "noto/version"
 module Noto
   module Core
     # ---------------- Available Methods -------- #
-    def noto
+    def noto(options = {})
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      # puts options
+      puts options
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
     end
   end
