@@ -11,7 +11,12 @@ module Noto
 
     def valid_target?
       if @@target.is_a?(Hash)
-        raise 'Association not found' unless self.reflect_on_all_associations.collect(&:name).include?(@@target.keys.first)
+        puts "*****************************"
+        puts self.reflect_on_all_associations.collect(&:name)
+        puts @@target.keys.first
+        puts self.reflect_on_all_associations.collect(&:name).include?(@@target.keys.first)
+        puts "*****************************"
+        # raise 'Association not found' unless self.reflect_on_all_associations.collect(&:name).include?(@@target.keys.first)
       elsif @@target.is_a?(Symbol)
 
       else
