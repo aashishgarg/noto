@@ -3,7 +3,7 @@ require "noto/version"
 module Noto
   module Core
     # ---------------- Available Methods -------- #
-    def noto(options = {})
+    def notifier(options = {})
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
       puts options
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
