@@ -1,19 +1,10 @@
-require "noto/version"
+require 'noto/version'
+require 'noto/notifier'
 
 module Noto
-  module Core
-    # ---------------- Available Methods -------- #
-    def notifier(options = {})
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts options
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-    end
-  end
-
   def self.included(base)
     base.class_eval do
       extend Core
-
     end
   end
 end
