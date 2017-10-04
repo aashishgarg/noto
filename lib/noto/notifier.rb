@@ -16,6 +16,7 @@ module Noto
       puts @@target.keys.first
       puts self.reflect_on_all_associations.collect(&:name)
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+      self
     end
   end
 end
