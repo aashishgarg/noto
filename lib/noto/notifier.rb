@@ -11,18 +11,21 @@ module Noto
 
     def valid_target?
       if @@target.is_a?(Hash)
-        puts "*****************************"
-        puts self
-        puts self.reflect_on_all_associations.collect(&:name)
-        puts @@target.keys.first
-        puts self.reflect_on_all_associations.collect(&:name).include?(@@target.keys.first)
-        puts "*****************************"
-        # raise 'Association not found' unless self.reflect_on_all_associations.collect(&:name).include?(@@target.keys.first)
+        raise 'Association not found' unless self.reflect_on_all_associations.collect(&:name).include?(@@target.keys.first)
       elsif @@target.is_a?(Symbol)
 
       else
 
       end
+
+    end
+  end
+
+  def self.included(base)
+    base.class_eval do
+      @@target = {}
+      extend Core
+
 
     end
   end
