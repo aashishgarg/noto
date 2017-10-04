@@ -4,6 +4,7 @@ require 'noto/notifier'
 module Noto
   def self.included(base)
     base.class_eval do
+      @@target = {}
       extend Core
     end
   end
