@@ -10,12 +10,10 @@ module Noto
     end
 
     def valid_target?
+      a = self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target.keys.first}
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts @@target
-      puts @@target.keys.first
-      puts @@target.keys.first.class
+      puts a
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target.keys.first}
     end
   end
 end
