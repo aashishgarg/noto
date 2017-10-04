@@ -13,7 +13,7 @@ module Noto
     end
 
     def valid_target?
-      self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target}
+      self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target[:user]}
     end
   end
 end
