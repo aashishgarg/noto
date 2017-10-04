@@ -13,8 +13,8 @@
       # a = self.reflect_on_all_associations.collect(&:name).any?{|association_name| association_name == @@target.keys.first}
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
       # puts a
-      puts @@target.keys.first
-      # puts self.reflect_on_all_associations.collect(&:name)
+      # puts @@target.keys.first
+      puts self.reflect_on_all_associations.collect(&:name)
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
     end
   end
