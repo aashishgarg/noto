@@ -13,9 +13,18 @@ module Noto
 
   def self.included(base)
     base.extend Core
-    self.notify_on.each do |action|
-      base.send("after_#{action}_commit", :notify)
-    end
+    # self.notify_on.each do |action|
+    #   base.send("after_#{action}_commit", :notify)
+    # end
+
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+    puts @@notify_on
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+    puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+
 
     private
     def notify
