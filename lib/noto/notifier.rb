@@ -1,32 +1,23 @@
 module Noto
   module Core
     def notifier(options = {})
-      @@target = options[:target]
-      valid_target?
-    end
+      @@target ||= options[:target]
+      @@notify_on ||= options[:notify_on]
+      @@message ||= options[:message]
 
-    def valid_options
-      [:target, :notify_on, :message]
-    end
-
-    def valid_target?
-      if @@target.is_a?(Hash)
-        raise 'Association not found' unless self.reflect_on_all_associations.collect(&:name).include?(@@target.keys.first)
-      elsif @@target.is_a?(Symbol)
-
-      else
-
-      end
-
+      # When target is a HASH
+      puts '************************************'
+      puts self.send("#{@@target.keys.first}").send("#{@@target.values.first}")
+      puts '************************************'
     end
   end
 
   def self.included(base)
     base.class_eval do
       @@target = {}
+      @@notify_on = []
+      @@message = ''
       extend Core
-
-
     end
   end
 end
