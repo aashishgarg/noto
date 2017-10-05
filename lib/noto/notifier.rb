@@ -4,6 +4,14 @@ module Noto
     mattr_accessor :notify_on
     mattr_accessor :message
 
+    def self.notify_on
+      @@notify_on
+    end
+
+    def self.notify_on=(notify_on)
+      @@notify_on = notify_on
+    end
+
     def notifier(options = {})
       self.target = options[:target]
       self.notify_on = options[:notify_on]
@@ -15,7 +23,7 @@ module Noto
     base.extend Core
     base.class_eval do
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts @@notify_on
+      puts self.notify_on
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
       puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
