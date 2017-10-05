@@ -12,9 +12,9 @@ module Noto
   end
 
   def self.included(base)
-    base.class_eval do
-      extend Core
-      after_commit :notify
+    base.extend Core
+    self.class.notify_on.each do |action|
+      base.send("after_#{action}_commit", :notify)
     end
 
     private
