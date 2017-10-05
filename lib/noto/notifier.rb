@@ -13,13 +13,7 @@ module Noto
 
   def self.included(base)
     base.extend Core
-    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-    puts self.inspect
-    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-    puts base.inspect
-    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-    puts "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-    base.notify_on.each do |action|
+    self.notify_on.each do |action|
       base.send("after_#{action}_commit", :notify)
     end
 
