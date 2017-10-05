@@ -5,9 +5,9 @@ module Noto
     mattr_accessor :message
 
     def notifier(options = {})
-      target = options[:target]
-      notify_on = options[:notify_on]
-      message = options[:message]
+      self.target = options[:target]
+      self.notify_on = options[:notify_on]
+      self.message = options[:message]
     end
   end
 
