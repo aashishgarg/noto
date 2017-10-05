@@ -20,6 +20,10 @@ module Noto
       puts "*****************************"
       puts self.class.target
       puts "*****************************"
+      puts self.class.notify_on
+      puts "*****************************"
+      puts self.class.message
+      puts "*****************************"
     end
   end
 end
