@@ -11,11 +11,7 @@ module Noto
 
   def self.included(base)
     base.class_eval do
-      @@target = {}
-      @@notify_on = []
-      @@message = ''
       extend Core
-
       after_commit :notify
     end
 
