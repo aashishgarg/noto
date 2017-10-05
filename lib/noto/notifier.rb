@@ -14,7 +14,7 @@ module Noto
   def self.included(base)
     base.extend Core
 
-    after_create_commit :notify
+    base.send('after_create_commit', :notify)
 
     private
     def notify
