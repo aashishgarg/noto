@@ -4,14 +4,6 @@ module Noto
     mattr_accessor :notify_on
     mattr_accessor :message
 
-    def self.notify_on
-      @@notify_on
-    end
-
-    def self.notify_on=(notify_on)
-      @@notify_on = notify_on
-    end
-
     def notifier(options = {})
       self.target = options[:target]
       self.notify_on = options[:notify_on]
@@ -21,23 +13,8 @@ module Noto
 
   def self.included(base)
     base.extend Core
-    Core.notify_on.each do |action|
-      base.send("after_#{action}_commit", :notify)
-    end
 
-    base.class_eval do
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts Core.notify_on
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-      puts "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-    end
-
-
-
-
+    after_create_commit :notify
 
     private
     def notify
