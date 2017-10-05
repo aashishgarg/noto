@@ -18,7 +18,7 @@ module Noto
     private
     def notify
       puts "*****************************"
-      puts self.target
+      puts base.target
       puts "*****************************"
     end
   end
