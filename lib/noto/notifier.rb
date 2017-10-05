@@ -6,6 +6,8 @@ module Noto
 
     def notifier(options = {})
       self.target = options[:target]
+      self.notify_on = options[:notify_on]
+      self.message = options[:message]
     end
   end
 
