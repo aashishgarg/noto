@@ -1,11 +1,11 @@
 module Noto
   module Core
+    mattr_accessor :target
+    mattr_accessor :notify_on
+    mattr_accessor :message
+
     def notifier(options = {})
-      @@target ||= options[:target]
-      @@notify_on ||= options[:notify_on]
-      @@message ||= options[:message]
-
-
+      self.target = options[:target]
     end
   end
 
@@ -22,7 +22,7 @@ module Noto
     private
     def notify
       puts "*****************************"
-      puts @@target
+      puts self.target
       puts "*****************************"
     end
   end
