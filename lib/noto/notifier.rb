@@ -1,13 +1,7 @@
 module Noto
   module Core
-
     def notifier(options = {})
-      cattr_accessor :options
-      puts '1111111111111111111111111111111111111111111'
-      puts options
-      self.options = options
-      puts self.options
-      puts '1111111111111111111111111111111111111111111'
+      cattr_accessor(:options) {options}
     end
   end
 
@@ -17,10 +11,9 @@ module Noto
 
     private
     def notify
-      puts '&&&&&&&&&&&&&&&&&&&&&&&&'
-      puts 'notified'
+      puts '111111111111111111111111111111111'
       puts self.class.options
-      puts '&&&&&&&&&&&&&&&&&&&&&&&&'
+      puts '111111111111111111111111111111111'
     end
   end
 end
