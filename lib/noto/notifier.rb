@@ -1,9 +1,11 @@
 module Noto
   module Core
-
+    mattr_accessor :options
     def notifier(options = {})
       puts '1111111111111111111111111111111111111111111'
       puts options
+      self.options = options
+      puts self.options
       puts '1111111111111111111111111111111111111111111'
     end
   end
