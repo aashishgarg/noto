@@ -4,4 +4,4 @@ require 'noto/notifier'
 module Noto
 end
 
-ActiveRecord::Base.send(:include, Noto)
+# ActiveRecord::Base.send(:include, Noto)
