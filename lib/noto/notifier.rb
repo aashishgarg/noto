@@ -11,8 +11,12 @@ module Noto
 
     private
     def notify
+
       puts '111111111111111111111111111111111'
       puts self.class.options
+      puts transaction_include_action?(:create)
+      puts transaction_include_action?(:update)
+      puts transaction_include_action?(:destroy)
       puts '111111111111111111111111111111111'
     end
   end
